@@ -1,0 +1,47 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    text-decoration: none;
+    list-style: none; 
+    box-sizing:content-box;
+}
+
+/* colores */
+
+.bg-white{
+    background-color: #ffffff;
+} 
+
+.bg-black {
+    background-color: #000000;
+}
+
+.bg-turquesa200{
+    background-color: #b5e5cf;
+}
+
+.bg-turquesa500{
+    background-color: #2F9A77;
+}
+
+.bg.turquesa900{
+    background-color: #134135;
+}
+
+.bg-turquesa950{
+    background-color: #0A241E;
+}
+
+.bg-red{
+    background-color: #FF0606;
+}
+
+aside{
+    width: 200px;
+}
+
+aside i{
+    margin: 8px;
+    font-size: 30px;
+}
+
