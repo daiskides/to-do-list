@@ -1,0 +1,67 @@
+main{
+	background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../assets/img/fondo-login-register.jfif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+	width: 100%;
+	height: 100vh;
+}
+
+
+.container-form{
+	background-color: rgba(8, 35, 28, 0.9);
+	max-width: 380px;
+	max-height: 500px;
+	border-radius: 12px;
+	box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.3);
+
+}
+
+form{	
+	width: 100%;
+	height: 80%;
+}
+
+.container-form input{
+	padding: 3px;
+	padding-bottom:10px ;
+	border-radius: 12px;
+	border: none;
+	width: 250px;
+	margin-bottom: 5px;
+}
+
+.container-form label{
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+.container-form p{
+	font-weight: 600;
+}
+
+.container-img{
+	width: 100%;
+	height: 100%;
+}
+
+.container-img img{
+	width: 70%;
+	height: 70%;
+}
+
+.green-200{
+	color: rgba(164, 225, 210);
+}
+
+.container-form .btn-register{
+	width: 100px;
+	margin-bottom: 30px;
+	color: rgba(65, 135, 111);
+	font-weight: bolder;
+	border: 2px solid rgba(164, 225, 210);
+	padding: 2px;
+}
