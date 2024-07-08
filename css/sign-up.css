@@ -34,6 +34,14 @@ form{
 	margin-bottom: 5px;
 }
 
+.checkbox input{
+	height: 12px;
+	width: 12px;
+}
+
+.checkbox label{
+	margin-left: 5px;
+}
 .container-form label{
 	font-weight: 600;
 	margin-bottom: 10px;

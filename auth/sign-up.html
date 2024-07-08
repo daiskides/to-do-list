@@ -17,13 +17,26 @@
 					<img src="../assets/img/logo-to-do-list.png" alt="">
 				</div>
 				<div class="d-flex flex-column">
-				<label for="">Dirección de correo</label>
-				<input  required   type="email" name="" id="" placeholder="ejemplo@gmail.com">
-				<label for="">Contraseña</label>
-				<input  required   type="password" name="" id="" placeholder="Ingresa tu contraseña">
-				<label for="">Confirmar contraseña</label>
-				<input  required   type="password" name="" id="" placeholder="Confirma tu contraseña">
-				<p>¿Ya tienes cuenta? <a href="sign-in.html" class="text-decoration-none green-200">Inicia sesión</a></p>
+					<div class="d-flex flex-column correo">
+					<label for="">Direccion de correo</label>
+					<input  required   type="email" name="" id="" placeholder=" ejemplo@gmail.com">
+					</div>
+					<div class="d-flex flex-column contrasena">
+					<label for="">Contraseña</label>
+					<input  required   type="password" name="" id="clave" placeholder=" Ingresa tu contraseña">
+					</div>
+					<div class="d-flex flex-column confirmContrasena">
+					<label for="">Confirmar contraseña</label>
+					<input  required   type="password" name="" id="confirmClave" placeholder=" Confirma tu contraseña">
+					</div>
+
+					<div class="d-flex flex-row-reverse checkbox justify-content-center align-items-center ">
+					<label for="">Mostrar contraseña</label>
+					<input id="checkbox" type="checkbox" onclick="showpassword()">
+				
+					</div>
+					
+					<p>¿Ya tienes cuenta? <a href="sign-in.html" class="text-decoration-none green-200">Inicia sesión</a></p>
 				
 				</div>
 				
@@ -31,6 +44,9 @@
 			</form>
 		</div>
 	</main>
+
+
+	<script src="../js/auth-register.js"></script>
 
 
 	
