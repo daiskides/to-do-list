@@ -10,16 +10,25 @@
   <title>To do list</title>
 </head>
 
-<body class="d-flex">
+<body class="d-flex flex-column">
+  <header class="bg-turquesa950 p-2 d-flex justify-content-between align-items-center">
+    <img src="../assets/img/logo-to-do-list.png" height="55px" alt="">
+    <nav class="w-100">
+      <ul class="d-flex justify-content-end text-white mb-0">
+        <li>
+          <a href="#" class="d-flex align-items-center text-decoration-none text-white">Cerrar Sesión<i class="fa-solid fa-arrow-right-from-bracket mx-3"></i></a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="w-100 d-flex flex-row">
   <aside class="bg-turquesa950 d-flex flex-column">
-    <img src="../assets/img/logo-to-do-list.png" alt="">
-
     <nav class="d-flex justify-content-center align-items-center h-100">
 
       <ul class="p-0 list-unstyled text-center">
 
         <li class="my-5">
-          <a href="../dashboard/mis-tareas.html" class="d-flex flex-column text-decoration-none text-white">
+          <a href="../dashboard/my-task.html" class="d-flex flex-column text-decoration-none text-white">
             <i class="fa-regular fa-rectangle-list"></i>Tareas</a>
         </li>
 
@@ -42,18 +51,7 @@
 
   </aside>
 
-  <main class="w-100 d-flex flex-column">
-    <header class="bg-turquesa950 p-2">
-      <nav class="w-100">
-        <ul class="d-flex justify-content-end text-white">
-          <li>
-            <a href="#" class="d-flex align-items-center text-decoration-none text-white">Cerrar Sesión<i class="fa-solid fa-arrow-right-from-bracket mx-3"></i></a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <section class="bg-white h-100 p-4">
+    <section class="bg-white w-100 h-100 p-4">
 
       <article class="rounded-1 h-100 w-100 bg-turquesa200 d-flex flex-column justify-content-between p-5">
         <div class="fw-blod text-black text-center"> 

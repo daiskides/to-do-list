@@ -10,16 +10,27 @@
   <title>To do list</title>
 </head>
 
-<body class="d-flex">
+<body class="d-flex flex flex-column">
+  <header class="bg-turquesa950 p-2 d-flex justify-content-between align-items-center">
+    <img src="../assets/img/logo-to-do-list.png" height="55px" alt="">
+    <nav class="w-100">
+      <ul class="d-flex justify-content-end text-white mb-0">
+        <li>
+          <a href="#" class="d-flex align-items-center text-decoration-none text-white">Cerrar Sesión<i class="fa-solid fa-arrow-right-from-bracket mx-3"></i></a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="w-100 d-flex flex-row">
+    
   <aside class="bg-turquesa950 d-flex flex-column">
-    <img src="../assets/img/logo-to-do-list.png" alt="">
 
     <nav class="d-flex justify-content-center align-items-center h-100">
 
-      <ul class="p-0 list-unstyled text-center">
+      <ul class="p-0 list-unstyled text-center ">
 
         <li class="my-5">
-          <a href="../dashboard/mis-tareas.html" class="d-flex flex-column text-decoration-none text-white">
+          <a href="../dashboard/my-task.html" class="d-flex flex-column text-decoration-none text-white">
             <i class="fa-regular fa-rectangle-list"></i>Tareas</a>
         </li>
 
@@ -42,18 +53,8 @@
 
   </aside>
 
-  <main class="w-100 d-flex flex-column">
-    <header class="bg-turquesa950 p-2">
-      <nav class="w-100">
-        <ul class="d-flex justify-content-end text-white">
-          <li>
-            <a href="#" class="d-flex align-items-center text-decoration-none text-white">Cerrar Sesión<i class="fa-solid fa-arrow-right-from-bracket mx-3"></i></a>
-          </li>
-        </ul>
-      </nav>
-    </header>
 
-    <section class="bg-white h-100 p-3 ">
+    <section class="bg-white w-100 h-100 p-3 ">
 
       <article class="rounded-3 h-100 w-100 bg-turquesa200 d-flex flex-column p-4">
         <div class="border-bottom border-black text-black d-flex justify-content-between align-items-center">
@@ -161,6 +162,7 @@
         </article>
       </section>
   </main>
+  
 
   <script src="https://kit.fontawesome.com/9fd95bcc65.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
