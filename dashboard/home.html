@@ -12,66 +12,104 @@
 
 <body class="d-flex flex-column">
   <header class="bg-turquesa950 p-2 d-flex justify-content-between align-items-center">
-    <img src="../assets/img/logo-to-do-list.png" height="55px" alt="">
-    <nav class="w-100">
-      <ul class="d-flex justify-content-end text-white mb-0">
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent container-fluid text-white">
+      <button class="navbar-toggler bg-light d-block d-md-none " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <img src="../assets/img/logo-to-do-list.png" height="55px" alt="">
+
+      <ul class="d-flex justify-content-end mb-0">
         <li>
-          <a href="#" class="d-flex align-items-center text-decoration-none text-white">Cerrar Sesión<i class="fa-solid fa-arrow-right-from-bracket mx-3"></i></a>
+          <a href="#" class="d-flex align-items-center text-decoration-none text-white">Cerrar Sesión<i
+              class="fa-solid fa-arrow-right-from-bracket mx-3"></i></a>
         </li>
       </ul>
+        
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+          <li class="nav-item">
+            <a class="nav-link active  text-white" aria-current="page" href="home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active  text-white" aria-current="page" href="my-task.html">Tareas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active  text-white" aria-current="page" href="#">Notificaciones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active  text-white" aria-current="page" href="progress.html">Progreso</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active  text-white" aria-current="page" href="settings.html">Ajustes</a>
+          </li>
+        </ul>
+      </div>
+
     </nav>
+
+
   </header>
   <main class="w-100 d-flex flex-row">
-  <aside class="bg-turquesa950 d-flex flex-column">
-    <nav class="d-flex justify-content-center align-items-center h-100">
+    <aside class="bg-turquesa950 d-none d-md-flex flex-column">
+      <nav class="d-flex justify-content-center align-items-center h-100">
 
-      <ul class="p-0 list-unstyled text-center">
+        <ul class="p-0 list-unstyled text-center">
 
-        <li class="my-5">
-    <div class="accordion-item text-white p-0 d-flex flex-column">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed d-flex flex-column" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-      <i class="fa-regular fa-rectangle-list"></i>Tareas
-      </button>
-    </h2>
-    <div id="collapseTwo" class="accordion-collapse collapse posicion" data-bs-parent="#accordionExample">
-      <div class="accordion-body d-flex flex-column my-2">
-        <a href="my-task.html" class="text-decoration-none text-white">Mis tareas</a>
-        <a href="" class="text-decoration-none text-white">Tareas asignadas</a>
-      </div>
-    </div>
-  </div>
+          <li class="my-5">
+            <a href="#" class="d-flex flex-column text-decoration-none text-white"><i
+                class="fa-solid fa-house"></i><span class="d-none d-lg-block"> Home</span></a>
+          </li>
+          <li class="my-5">
+            <div class="accordion-item text-white p-0 d-flex flex-column">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed d-flex flex-column" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <i class="fa-regular fa-rectangle-list"></i>
+                  <span class="d-none d-lg-block"> Tareas</span>
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse posicion" data-bs-parent="#accordionExample">
+                <div class="accordion-body d-flex flex-column my-2">
+                  <a href="my-task.html" class="text-decoration-none text-white">Mis tareas</a>
+                  <a href="" class="text-decoration-none text-white">Tareas asignadas</a>
+                </div>
+              </div>
+            </div>
 
-        </li>
+          </li>
 
-        <li class="my-5">
-          <a href="#" class="d-flex flex-column text-decoration-none text-white"><i
-              class="fa-regular fa-bell"></i>Notificaciones</a>
-        </li>
+          <li class="my-5">
+            <a href="#" class="d-flex flex-column text-decoration-none text-white"><i
+                class="fa-regular fa-bell"></i><span class="d-none d-lg-block"> Notificaciones</span></a>
+          </li>
 
-        <li class="my-5">
-          <a href="progress.html" class="d-flex flex-column text-decoration-none text-white"><i class="fa-solid fa-chart-pie"></i>Progreso</a>
-        </li>
+          <li class="my-5">
+            <a href="progress.html" class="d-flex flex-column text-decoration-none text-white"><i
+                class="fa-solid fa-chart-pie"></i><span class="d-none d-lg-block"> Progreso</span></a>
+          </li>
 
-        <li class="my-5">
-          <a href="#" class="d-flex flex-column text-decoration-none text-white"><i class="fa-solid fa-gear"></i>Ajuste</a>
-        </li>
+          <li class="my-5">
+            <a href="#" class="d-flex flex-column text-decoration-none text-white"><i
+                class="fa-solid fa-gear"></i><span class="d-none d-lg-block"> Ajuste</span></a>
+          </li>
 
-      </ul>
+        </ul>
 
-    </nav>
+      </nav>
 
-  </aside>
+    </aside>
 
     <section class="bg-white w-100 h-100 p-4">
 
       <article class="rounded-1 h-100 w-100 bg-turquesa200 d-flex flex-column justify-content-between p-5">
-        <div class="fw-blod text-black text-center"> 
+        <div class="fw-blod text-black text-center">
           <h1>¡Bienvenidos a nuestro to do list!</h1>
-          <h4>To do list es una app para la gestion del tiempo que permite organizar tareas  de una manera rapida y sencilla, automatizando tu listado; cuenta con una interfaz simple y muy intuitiva.</h4>
+          <h4>To do list es una app para la gestion del tiempo que permite organizar tareas de una manera rapida y
+            sencilla, automatizando tu listado; cuenta con una interfaz simple y muy intuitiva.</h4>
         </div>
-        </article>
-      </section>
+      </article>
+    </section>
   </main>
 
   <script src="https://kit.fontawesome.com/9fd95bcc65.js" crossorigin="anonymous"></script>
