@@ -31,13 +31,45 @@
       <nav class="d-flex justify-content-center align-items-center h-100">
 
         <ul class="p-0 list-unstyled text-center ">
-
           <li class="my-5">
-            <a href="../dashboard/my-task.html" class="d-flex flex-column text-decoration-none text-white">
-              <i class="fa-regular fa-rectangle-list"></i>Tareas</a>
-            <div class="accordion" id="accordionExample">
-
+            <a href="home.html" class="d-flex flex-column text-decoration-none text-white"><i
+                class="fa-solid fa-house"></i><span class="d-none d-lg-block"> Home</span></a>
           </li>
+
+           <li class="my-5">
+              <div class="accordion-item text-white p-0 d-flex flex-column">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed d-flex flex-column"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    <i class="fa-regular fa-rectangle-list"></i>Tareas
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse posicion"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body d-flex flex-column my-2">
+                    <a
+                      href="my-task.html"
+                      class="text-decoration-none text-white"
+                      >Mis tareas</a
+                    >
+                    <a
+                      href="asigned.html"
+                      class="text-decoration-none text-white"
+                      >Tareas asignadas</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </li>
 
           <li class="my-5">
             <a href="#" class="d-flex flex-column text-decoration-none text-white"><i
