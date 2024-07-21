@@ -38,3 +38,7 @@
 .bg-white{
     background: white;
 }
+
+.card{
+    border: none !important;
+}
