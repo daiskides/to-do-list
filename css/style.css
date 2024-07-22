@@ -153,3 +153,8 @@ input:checked + .slider-black:before {
   border-radius: 50%;
 }
 
+.close-modal{
+  position: absolute;
+  right: 25px;
+  top: 25px;
+}
