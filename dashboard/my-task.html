@@ -182,9 +182,9 @@
               </thead>
               <tbody>
                 <tr class="">
-                  <td scope="row">Usar el displey excelente :/</td>
-                  <td>Alta</td>
-                  <td>En proceso, tengan paciencia</td>
+                  <td scope="row" id="txtDescriptionDay">Usar el displey excelente :/</td>
+                  <td id="txtPriorityDay">Alta</td>
+                  <td id="txtStayDay">En proceso, tengan paciencia</td>
                   <td>
                     <i class="fa-solid fa-trash-can m-1" style="color: red;"></i>
                     <i class="fa-solid fa-pen-to-square m-1"></i>
@@ -238,8 +238,9 @@
             <label for="prioridad">Prioridad</label>
             <select name="prioridad" id=""  class="rounded shadow-md bg-turquesa200 p-1">
               <option value="value1">Seleccionar</option>
-              <option value="value2">Value 2</option>
-              <option value="value3">Value 3</option>
+              <option value="value2">Baja</option>
+              <option value="value3">Media</option>
+              <option value="value3">Alta</option>
             </select>
           </div>
 
@@ -247,16 +248,17 @@
             <label for="estado">Estado</label>
             <select name="estado" id=""  class="rounded shadow-md bg-turquesa200 p-1">
               <option value="value1">Seleccionar</option>
-              <option value="value2">Value 2</option>
-              <option value="value3">Value 3</option>
+              <option value="value2">En proceso</option>
+              <option value="value3">Por hacer</option>
+              <option value="value3">Terminada</option>
             </select>
           </div>
 
-          <div class="d-flex flex-column">
+         <!--  <div class="d-flex flex-column">
             <label for="description">Descripción</label>
             <textarea name="description" id="description"  class="rounded shadow-md bg-turquesa200 p-1"></textarea>
           </div>
-
+ -->
         </div>
         <div class="modal-footer d-flex justify-content-center align-items-center">
           <button type="button" class="btn btn-outline-success m-2"  data-bs-dismiss="modal"
@@ -272,6 +274,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+    <!-- <script src="../js/save-task.js"></script> -->
 </body>
 
 </html>
