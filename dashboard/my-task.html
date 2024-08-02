@@ -115,7 +115,7 @@
         <div class="fw-blod text-black text-center mt-4">
 
           <div class="table-responsive border-radius">
-            <table class="table">
+            <table class="table" id="tableTareasDiarias">
               <thead>
                 <tr>
                   <th scope="col">Tareas Diarias</th>
@@ -124,7 +124,7 @@
                   <th scope="col">Acciones</th>
                 </tr>
               </thead>
-              <tbody>
+              <!-- <tbody>
                 <tr class="">
                   <td scope="row">Maquetar el diseño de figma:/</td>
                   <td>Media</td>
@@ -134,7 +134,7 @@
                     <i class="fa-solid fa-pen-to-square m-1"></i>
                   </td>
                 </tr>
-              </tbody>
+              </tbody> -->
             </table>
           </div>
 
@@ -143,7 +143,7 @@
         <div class="fw-blod text-black text-center">
 
           <div class="table-responsive border-radius">
-            <table class="table">
+            <table class="table" id="tableTareasSemanales">
               <thead>
                 <tr>
                   <th scope="col">Tareas Semanales</th>
@@ -152,7 +152,7 @@
                   <th scope="col">Acciones</th>
                 </tr>
               </thead>
-              <tbody>
+             <!--  <tbody>
                 <tr class="">
                   <td scope="row">Que David deje de regañarme</td>
                   <td>Alta</td>
@@ -162,7 +162,7 @@
                     <i class="fa-solid fa-pen-to-square m-1"></i>
                   </td>
                 </tr>
-              </tbody>
+              </tbody> -->
             </table>
           </div>
 
@@ -171,7 +171,7 @@
         <div class="fw-blod text-black text-center">
 
           <div class="table-responsive border-radius">
-            <table class="table">
+            <table class="table" id="tableTareasMensuales">
               <thead>
                 <tr>
                   <th scope="col">Tareas Mensuales</th>
@@ -180,7 +180,7 @@
                   <th scope="col">Acciones</th>
                 </tr>
               </thead>
-              <tbody>
+              <!-- <tbody>
                 <tr class="">
                   <td scope="row" id="txtDescriptionDay">Usar el displey excelente :/</td>
                   <td id="txtPriorityDay">Alta</td>
@@ -190,7 +190,7 @@
                     <i class="fa-solid fa-pen-to-square m-1"></i>
                   </td>
                 </tr>
-              </tbody>
+              </tbody> -->
             </table>
           </div>
 
@@ -208,51 +208,48 @@
           <button type="button" class="btn-close close-modal bg-light" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body d-flex flex-column justify-content-center align-items-between p-5 gap-3">
-          <div>
+          <form action="" id="tareasForm">
+             <div>
 
             <label>Tipo</label>
             <div class="d-flex justify-content-between">
-
-              <div>
-                <input type="radio" name="diaria" id="diaria">
-                <label for="diaria">Diaria</label>
-              </div>
-              <div>
-                <input type="radio" name="semanal" id="semanal">
-                <label for="semanal">Semanal</label>
-              </div>
-              <div>
-                <input type="radio" name="mensual" id="mensual">
-                <label for="mensual">Mensual</label>
-              </div>
+              <select name="tipoTarea" id="">
+              <option value="Defecto">Seleccionar</option>
+              <option value="Diaria">Diaria</option>
+              <option value="Semanal">Semanal</option>
+              <option value="Mensual">Mensual</option>
+              </select>
+           
 
             </div>
           </div>
           <div class="d-flex flex-column">
 
             <label for="title">Título</label>
-            <input type="text" class="rounded shadow-md bg-turquesa200 p-1">
+            <input type="text" class="rounded shadow-md bg-turquesa200 p-1" name="titulo">
 
           </div>
           <div class="d-flex justify-content-between">
             <label for="prioridad">Prioridad</label>
             <select name="prioridad" id=""  class="rounded shadow-md bg-turquesa200 p-1">
-              <option value="value1">Seleccionar</option>
-              <option value="value2">Baja</option>
-              <option value="value3">Media</option>
-              <option value="value3">Alta</option>
+              <option value="Defecto">Seleccionar</option>
+              <option value="Baja">Baja</option>
+              <option value="Media">Media</option>
+              <option value="Alta">Alta</option>
             </select>
           </div>
 
           <div class="d-flex justify-content-between">
             <label for="estado">Estado</label>
-            <select name="estado" id=""  class="rounded shadow-md bg-turquesa200 p-1">
-              <option value="value1">Seleccionar</option>
-              <option value="value2">En proceso</option>
-              <option value="value3">Por hacer</option>
-              <option value="value3">Terminada</option>
+            <select name="estado"   class="rounded shadow-md bg-turquesa200 p-1">
+              <option value="Defecto">Seleccionar</option>
+              <option value="En proceso">En proceso</option>
+              <option value="Por hacer">Por hacer</option>
+              <option value="Terminada">Terminada</option>
             </select>
           </div>
+         
+         
 
          <!--  <div class="d-flex flex-column">
             <label for="description">Descripción</label>
@@ -261,10 +258,11 @@
  -->
         </div>
         <div class="modal-footer d-flex justify-content-center align-items-center">
-          <button type="button" class="btn btn-outline-success m-2"  data-bs-dismiss="modal"
+          <button type="submit" class="btn btn-outline-success m-2"  data-bs-dismiss="modal"
           >
             Agregar</button>
         </div>
+         </form>
       </div>
     </div>
   </div>
@@ -274,7 +272,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-    <!-- <script src="../js/save-task.js"></script> -->
+    <script src="../js/save-task.js"></script>
 </body>
 
 </html>
