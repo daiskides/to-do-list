@@ -1,110 +1,137 @@
+let tasks=[];
+let arr=[];
+
+
 let formTask=document.getElementById("tareasForm");
 let tareasDiarias=document.getElementById("tableTareasDiarias");
 let tareasSemanles=document.getElementById("tableTareasSemanales");
 let tareasMensuales=document.getElementById("tableTareasMensuales");
+let baddTask=document.getElementById("addTask");
 
 const typetask= formTask.elements["tipoTarea"];
 const title= formTask.elements["titulo"];
 const priority= formTask.elements["prioridad"];
-const estado= formTask.elements["estado"];	
+const estado= formTask.elements["estado"];
+
+const json= load();
+
+try{
+	arr=JSON.parse(json);
+}catch(error){
+	arr=[];
+}
+
+tasks= arr?[...arr]:[];
+
+
+renderTasks();
 
 formTask.addEventListener("submit",(event)=>{
 	event.preventDefault();
-	console.log("perfecto, funciona");
-	console.warn('Valores de los inputs');
-	console.log(typetask.value);
-	console.log(title.value);
-	console.log(priority.value);
-	console.log(estado.value);
+	addTask();
+
+});
 
 
-	localStorage.setItem("TipoDeTarea",typetask.value);
-	localStorage.setItem("Titulo",title.value);
-	localStorage.setItem("Prioridad",priority.value);
-	localStorage.setItem("Estado",estado.value);
+function  addTask(){
+	const newTask={
+		id:(Math.random()*100).toString(36).slice(3),
+		type:typetask.value,
+		titleTask:title.value,
+		priority:priority.value,
+		estado:estado.value,
+	};
 
 
-	let TipoDeTarea=  localStorage.getItem("TipoDeTarea");
-	let TituloDeTarea= localStorage.getItem("Titulo");
-	let PrioridadDeTarea= localStorage.getItem("Prioridad");
-	let EstadoDeTarea= localStorage.getItem("Estado");
+	tasks.unshift(newTask);
+	save(JSON.stringify(tasks));
 
-	console.warn('datos obtenidos de localStorage');
-	console.log('Tipo de tarea: '+TipoDeTarea);
-	console.log('Titulo de la tarea: '+TituloDeTarea);
-	console.log('Prioridad de la tarea: '+PrioridadDeTarea);
-	console.log('Estado de la tarea: '+EstadoDeTarea);
+	renderTasks();
+}
 
 
 	function renderTasks(){
+		if (typetask.value==="Diaria") {
 
-		if (TipoDeTarea==="Diaria") {
-
-		tareasDiarias.innerHTML+=		`
+			const taskHTML=tasks.map(task=>{
+				return `
 
 		  		<tbody>
                 <tr class="">
-                  <td scope="row">${TituloDeTarea}</td>
-                  <td>${PrioridadDeTarea}</td>
-                  <td>${EstadoDeTarea}</td>
+                  <td scope="row">${title.value}</td>
+                  <td>${priority.value}</td>
+                  <td>${estado.value}</td>
                   <td>
                     <i class="fa-solid fa-trash-can m-1" style="color: red;"></i>
                     <i class="fa-solid fa-pen-to-square m-1"></i>
                   </td>
                 </tr>
-           </tbody>
+           </tbody>`;
+			});
+		
 
-		`;
+		 tareasDiarias.innerHTML+=	taskHTML.join("");
 	
 	}
 
-		if (TipoDeTarea==="Semanal") {
+	
+		if (typetask.value==="Semanal") {
 
-		tareasSemanles.innerHTML+=`
+			const taskHTML=tasks.map(task=>{
+				return `
 
 		  		<tbody>
                 <tr class="">
-                  <td scope="row">${TituloDeTarea}</td>
-                  <td>${PrioridadDeTarea}</td>
-                  <td>${EstadoDeTarea}</td>
+                  <td scope="row">${title.value}</td>
+                  <td>${priority.value}</td>
+                  <td>${estado.value}</td>
                   <td>
                     <i class="fa-solid fa-trash-can m-1" style="color: red;"></i>
                     <i class="fa-solid fa-pen-to-square m-1"></i>
                   </td>
                 </tr>
-           </tbody>
+           </tbody>`;
+			});
+		
 
-		`;
+		 tareasSemanles.innerHTML+=	taskHTML.join("");
 	
 	}
 
-	if (TipoDeTarea==="Mensual") {
-		tareasMensuales.innerHTML+=`
+		if (typetask.value==="Mensual") {
+
+			const taskHTML=tasks.map(task=>{
+				return `
 
 		  		<tbody>
                 <tr class="">
-                  <td scope="row">${TituloDeTarea}</td>
-                  <td>${PrioridadDeTarea}</td>
-                  <td>${EstadoDeTarea}</td>
+                  <td scope="row">${title.value}</td>
+                  <td>${priority.value}</td>
+                  <td>${estado.value}</td>
                   <td>
                     <i class="fa-solid fa-trash-can m-1" style="color: red;"></i>
                     <i class="fa-solid fa-pen-to-square m-1"></i>
                   </td>
                 </tr>
-           </tbody>
+           </tbody>`;
+			});
+		
 
-		`;
-	}
+		 tareasMensuales.innerHTML+=	taskHTML.join("");
+	
+	 }
+
+
 }
 
 
 
 
-renderTasks();
+function save(data) {
+	localStorage.setItem("tasksItems",data);
+}
 
-});
-
-
-
-
+function  load(){
+	return localStorage.getItem("tasksItems");
+}
 		
