@@ -12,14 +12,14 @@
 	<!-- registro -->
 	<main class="d-flex justify-content-center align-items-center">
 		<div class=" container-form container d-flex justify-content-center align-items-center ">
-			<form id="signup" action="" class="d-flex flex-column justify-content-center align-items-center text-white">
+			<form  action="" class="d-flex flex-column justify-content-center align-items-center text-white">
 				<div class="container-img d-flex justify-content-center align-items-center">
 					<img src="../assets/img/logo-to-do-list.png" alt="">
 				</div>
 				<div class="d-flex flex-column">
 					<div class="d-flex flex-column correo">
 					<label for="">Direccion de correo</label>
-					<input  required   type="email" name="email" id="" placeholder=" ejemplo@gmail.com">
+					<input  required   type="email" name="email" id="correo" placeholder=" ejemplo@gmail.com">
 					</div>
 					<div class="d-flex flex-column contrasena">
 					<label for="">Contraseña</label>
@@ -33,7 +33,7 @@
 
 					<div class="d-flex flex-row-reverse checkbox justify-content-center align-items-center ">
 					<label for="">Mostrar contraseña</label>
-					<input id="checkbox" type="checkbox" onclick="showpassword()">
+					<input id="checkbox" type="checkbox">
 				
 					</div>
 					<p>¿Ya tienes cuenta? <a href="sign-in.html" class="text-decoration-none green-200">Inicia sesión</a></p>
@@ -41,13 +41,14 @@
 				
 				</div>
 				
-				<input type="submit" value="Registrar" class="btn-register">
+				<input type="submit" value="Registrar" class="btn-register" id="signup">
 			</form>
 		</div>
 	</main>
 
 
-	<script src="../js/auth-register.js"></script>
+	<script type="module" src="../js/auth-register.js"></script>
+	<script type="module" src="../js/firebase.js"></script>
 
 
 	
