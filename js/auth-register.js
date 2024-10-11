@@ -23,29 +23,32 @@
  const analytics = getAnalytics(app);
  const auth= getAuth(app);
 
-let x = document.getElementById("clave");
-let y = document.getElementById("confirmClave");
+let inputClave = document.getElementById("clave");
+let inputConfirmClave = document.getElementById("confirmClave");
 const inputs = document.querySelectorAll("input");
 let checkbox= document.getElementById("checkbox");
+
 
 
 checkbox.addEventListener('click',()=>{
 	showpassword();
 });
 
+
+
 function showpassword() {
-	if (x.type && y.type === "password") {
-	  x.type = "text";
-	  y.type = "text";
+	if (inputClave.type && inputConfirmClave.type === "password") {
+	  inputClave.type = "text";
+	  inputConfirmClave.type = "text";
 	} else {
-	  x.type = "password";
-	  y.type = "password";
+	  inputClave.type = "password";
+	  inputConfirmClave.type = "password";
 	}
 }
 
 
-function validarClaves(){
-	if (x.value == y.value) {
+/* function validarClaves(){
+	if (inputClave.value == inputConfirmClave.value) {
 		console.log(" son iguales");
 	}
 	else{
@@ -53,14 +56,12 @@ function validarClaves(){
 	}
 	document.getElementById("form1").submit();
 }
+ */
 
-
-const validarPassword = () => {
-	const inputPassword1 = document.getElementById('clave');
-	const inputPassword2 = document.getElementById('confirmClave');
+const validarPassword = () => { //alcance o scope
 	const textError= document.getElementById("textError");
 
-	if(inputPassword1.value !== inputPassword2.value){
+	if(inputClave.value !== inputConfirmClave.value){
 		textError.classList.remove("d-none");
 		textError.classList.add("d-block");
 		textError.classList.remove("text-white");
@@ -112,9 +113,15 @@ const form = document.getElementById('signup');
 // 	//ya teniendo esta información podemos guardarla en donde queramos 
 // 	//por ahora vamos a guardarlo en el localstorage investigar que es...
 
+
 // 	//para esto usamos el metodo set items que recibe clave: valor *como lo hacen los objetos*
 // 	localStorage.setItem('email',emailField.value); //clave *email ,valor *email , osea el nombre y el contenido
 // 	localStorage.setItem('pass',passField.value);  // clave *pass ,valor *pass
+
+	//para esto usamos el metodo set items que recibe clave: valor *como lo hacen los objetos*
+	// localStorage.setItem('correo',emailField.value); //clave *email ,valor *email , osea el nombre y el contenido
+	// localStorage.setItem('contraseña',passField.value);  // clave *pass ,valor *pass
+
 
 // 	//esto lo podemos ver en el devtool / aplication / storage / loccalstorage / local IP 
 // 	//aqui hay un capture https://prnt.sc/k9LheUZ19-cG
@@ -125,8 +132,13 @@ const form = document.getElementById('signup');
 
 // 	//entonces vamos a guardar esos datos en unas nuevas variables para usarlas
 
+
 // 	let correo = localStorage.getItem('email');
 // 	let clave = localStorage.getItem('pass');
+
+	// let correo = localStorage.getItem('correo');
+	// let clave = localStorage.getItem('contraseña');
+
 
 // 	//ahora vamos a mostrar esos datos que estamos obteniendo
 
